@@ -31,10 +31,10 @@ namespace PongProject
             base.Initialize();
             this.body.ApplyLinearImpulse((Helper.randomUnitVector(Helper.VectorFavor.Horizontal) / 10));
             this.scoreText.Text = "Score: " + score;
-            body.OnPhysic2DCollision += (s, o) =>
-                {
-                    this.body.ApplyLinearImpulse(new Vector2(.05f, .05f));
-                };
+            //body.OnPhysic2DCollision += (s, o) =>
+            //    {
+            //        this.body.ApplyLinearImpulse(new Vector2(.05f, .05f));
+            //    };
         }
         protected override void Update(TimeSpan gameTime)
         {
