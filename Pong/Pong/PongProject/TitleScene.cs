@@ -24,13 +24,13 @@ namespace PongProject
 
         private void CreateUI()
         {
-            TextBlock titleText = new TextBlock()
-            {
-                Text = "Pongify",
-                VerticalAlignment = VerticalAlignment.Center,
-                HorizontalAlignment = HorizontalAlignment.Center,
-                Margin = new Thickness(15, 0, 0, 60)
-            };
+            //TextBlock titleText = new TextBlock()
+            //{
+            //    Text = "Pongify",
+            //    VerticalAlignment = VerticalAlignment.Center,
+            //    HorizontalAlignment = HorizontalAlignment.Center,
+            //    Margin = new Thickness(15, 0, 0, 60)
+            //};
             Button startButton = new Button()
             {
                 Text = "Start",
@@ -38,13 +38,11 @@ namespace PongProject
                 HorizontalAlignment = HorizontalAlignment.Center,
                 Margin = new Thickness(0, 90, 0, 0)
             };
-            startButton.Click += (s, o) =>
-            {
-                ScreenLayers sl = WaveServices.ScreenLayers;
-                sl.AddScene<MainScene>();
-                sl.Apply();
-            };
-            EntityManager.Add(titleText);
+            //startButton.Click += (s, o) =>
+            //{
+            //    WaveServices.ScreenLayers.AddScene<MainScene>().Apply();
+            //};
+            //EntityManager.Add(titleText);
             EntityManager.Add(startButton);
         }
     }

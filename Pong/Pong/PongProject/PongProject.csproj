@@ -46,10 +46,13 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="BallBehavior.cs" />
+    <Compile Include="ComputerPaddleBehavior.cs" />
     <Compile Include="Game.cs" />
     <Compile Include="Helper.cs" />
+    <Compile Include="LeftPaddleBehavior.cs" />
     <Compile Include="MainScene.cs" />
     <Compile Include="PaddleBehavior.cs" />
+    <Compile Include="RightPaddleBehavior.cs" />
     <Compile Include="TitleScene.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
