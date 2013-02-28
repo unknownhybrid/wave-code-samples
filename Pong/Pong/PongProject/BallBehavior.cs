@@ -35,6 +35,7 @@ namespace PongProject
             //    {
             //        this.body.ApplyLinearImpulse(new Vector2(.05f, .05f));
             //    };
+            
         }
         protected override void Update(TimeSpan gameTime)
         {
