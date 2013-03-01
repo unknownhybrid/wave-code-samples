@@ -16,7 +16,7 @@ namespace PongProject
         private int score;
         public TextBlock scoreText;
         [RequiredComponent]
-        public RigidBody2D body;
+        public RigidBody2D body;    
 
 
         public BallBehavior(TextBlock scoreText)
@@ -44,7 +44,7 @@ namespace PongProject
                 if (this.body.Transform2D.X < 0) this.scoreText.Text = "Score: " + (score = 0);
                 else if (this.body.Transform2D.X > 800) this.scoreText.Text = "Score: " + ++score;
                 this.body.ResetPosition(new Vector2(BALL_STARTING_X, BALL_STARTING_Y));
-                this.body.ApplyLinearImpulse((Helper.randomUnitVector() / 10));
+                this.body.ApplyLinearImpulse((Helper.randomUnitVector(Helper.VectorFavor.Horizontal) / 10));
             }
         }
     }

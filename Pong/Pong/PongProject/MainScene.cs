@@ -51,7 +51,7 @@ namespace PongProject
                 .AddComponent(new BallBehavior(scoreText));
             
             Entity leftPaddle = this.CreateSquareSprite("Left Paddle", LEFT_PADDLE_STARTING_X, PADDLE_STARTING_Y, PADDLE_FILENAME, true).AddComponent(new LeftPaddleBehavior());
-            Entity rightPaddle = this.CreateSquareSprite("Right Paddle", RIGHT_PADDLE_STARTING_X, PADDLE_STARTING_Y, PADDLE_FILENAME, true).AddComponent(new ComputerPaddleBehavior(ball.FindComponentOfType<RigidBody2D>()));
+            Entity rightPaddle = this.CreateSquareSprite("Right Paddle", RIGHT_PADDLE_STARTING_X, PADDLE_STARTING_Y, PADDLE_FILENAME, true).AddComponent(new RightPaddleBehavior()); //ComputerPaddleBehavior(ball.FindComponentOfType<RigidBody2D>()));
 
             Entity topWall = this.CreateSquareSprite("Top Wall", 400, 0, WALL_FILENAME, true);
             Entity bottomWall = this.CreateSquareSprite("Bottom Wall", 400, 600, WALL_FILENAME, true);
@@ -66,7 +66,7 @@ namespace PongProject
             EntityManager.Add(bottomWall);
             EntityManager.Add(ball);
 
-        }
+        } 
 
         
         /// <summary>
@@ -106,7 +106,7 @@ namespace PongProject
                 .AddComponent(new Transform2D() { X = x, Y = y })
                 .AddComponent(new CircleCollider())
                 .AddComponent(new Sprite(fileName))
-                .AddComponent(new RigidBody2D() { IsKinematic = isKinematic, Mass = mass, Friction = 0f, Damping = 0f, Restitution = 1f })
+                .AddComponent(new RigidBody2D() { IsKinematic = isKinematic, Mass = mass, Friction = 0f, Damping = 0f, Restitution = 1.05f })
                 .AddComponent(new SpriteRenderer(DefaultLayers.Alpha));
             return sprite;
         }

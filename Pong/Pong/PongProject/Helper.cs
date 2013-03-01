@@ -20,28 +20,23 @@ namespace PongProject
         {
             float x = 0;
             float y = 0;
+            Random r = new Random();
             switch (favor)
             {
                 case VectorFavor.Horizontal:
-                    while (x < (1 / Math.Sqrt(2)))
-                    {
-                        x = ((float)new Random().Next(0, 100)) / 100f;
-                    }
+                    x = (float)(r.Next(71, 100)) / 100f;
                     y = (float)Math.Sqrt((1 - (x * x)));
-
-                    x = (new Random().Next(0, 100) > 50) ? -x : x;
-                    y = (new Random().Next(0, 100) > 50) ? -y : y;
+                    x = (r.Next(0, 100) > 50) ? -x : x;
+                    y = (r.Next(0, 100) > 50) ? -y : y;
                     return new Vector2(x, y);
+
                 case VectorFavor.Vertical:
-                    while (y < (1 / Math.Sqrt(2)))
-                    {
-                        y = ((float)new Random().Next(0, 100)) / 100f;
-                    }
+                    y = (float)(r.Next(71, 100)) / 100f;
                     x = (float)Math.Sqrt((1 - (y * y)));
-
-                    x = (new Random().Next(0, 100) > 50) ? -x : x;
-                    y = (new Random().Next(0, 100) > 50) ? -y : y;
+                    x = (r.Next(0, 100) > 50) ? -x : x;
+                    y = (r.Next(0, 100) > 50) ? -y : y;
                     return new Vector2(x, y);
+
                 default:
                     return randomUnitVector();
             }
