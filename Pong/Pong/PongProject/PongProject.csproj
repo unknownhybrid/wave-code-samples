@@ -50,6 +50,7 @@
     <Compile Include="Game.cs" />
     <Compile Include="Helper.cs" />
     <Compile Include="LeftPaddleBehavior.cs" />
+    <Compile Include="MainMenuScene.cs" />
     <Compile Include="MainScene.cs" />
     <Compile Include="PaddleBehavior.cs" />
     <Compile Include="RightPaddleBehavior.cs" />

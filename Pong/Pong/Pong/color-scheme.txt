@@ -1,0 +1,11 @@
+neutral set:
+6494ed - cornflower blue
+ffc65c - brown
+ff5c60 - red
+60f558 - green
+
+darker set:
+214b9a - blue
+a6761e - brown
+a51e21 - red
+239f1d - green

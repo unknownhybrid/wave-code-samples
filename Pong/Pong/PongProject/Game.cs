@@ -17,7 +17,7 @@ namespace PongProject
             base.Initialize(adapter);
 
             ScreenLayers screenLayers = WaveServices.ScreenLayers;
-            screenLayers.AddScene<MainScene>();
+            screenLayers.AddScene<TitleScene>();
             screenLayers.Apply();
         }
     }
