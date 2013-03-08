@@ -51,7 +51,7 @@ namespace PongProject
                 .AddComponent(new BallBehavior(scoreText));
             
             Entity leftPaddle = this.CreateSquareSprite("Left Paddle", LEFT_PADDLE_STARTING_X, PADDLE_STARTING_Y, PADDLE_FILENAME, true).AddComponent(new LeftPaddleBehavior());
-            Entity rightPaddle = this.CreateSquareSprite("Right Paddle", RIGHT_PADDLE_STARTING_X, PADDLE_STARTING_Y, PADDLE_FILENAME, true).AddComponent(new RightPaddleBehavior());//ComputerPaddleBehavior(ball.FindComponentOfType<RigidBody2D>()));
+            Entity rightPaddle = this.CreateSquareSprite("Right Paddle", RIGHT_PADDLE_STARTING_X, PADDLE_STARTING_Y, PADDLE_FILENAME, true).AddComponent(new ComputerPaddleBehavior(ball.FindComponentOfType<RigidBody2D>()));//RightPaddleBehavior());//
 
             Entity topWall = this.CreateSquareSprite("Top Wall", 400, 0, WALL_FILENAME, true);
             Entity bottomWall = this.CreateSquareSprite("Bottom Wall", 400, 600, WALL_FILENAME, true);

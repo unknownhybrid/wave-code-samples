@@ -48,27 +48,10 @@ namespace PongProject
             {
                 toMainMenu();
             };
-            block = new Entity("Block")
-                .AddComponent(new Transform2D())
-                .AddComponent(new ImageControl("Content/menubar.wpk")
-                {
-                    HorizontalAlignment = HorizontalAlignment.Left
-                })
-                .AddComponent(new ImageControlRenderer(DefaultLayers.Alpha))
-                .AddComponent(new AnimationUI());
             EntityManager.Add(titleText);
             EntityManager.Add(startButton);
-            EntityManager.Add(block);
         }
         private void toMainMenu(){
-            SingleAnimation anim = new SingleAnimation(600f, 0f, 4f, EasingFunctions.Cubic);
-            anim.Completed += new EventHandler(OnAnimationCompleted);
-
-            block.FindComponent<AnimationUI>()
-                .BeginAnimation(Transform2D.YProperty, anim);
-        }
-        private void OnAnimationCompleted(object sender, EventArgs e)
-        {
             WaveServices.ScreenLayers.AddScene<MainScene>().Apply();
         }
     }
